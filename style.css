@@ -1,12 +1,13 @@
 * {
-    margin: 1px;
-    padding: 1PX; 
+    border-radius: 3px;
+    border: 1px solid black;
 }
 
 body {
     display: flex;
     align-items: center;
     justify-content: center;
+    background-color: black;
 }
 .main-container {
     display: flex;
@@ -14,10 +15,24 @@ body {
     justify-content: center;
     align-items: center;
     width: 100%;
+    background-color: aqua;
 }
+
+.title {
+    padding: 7px;
+    background-color: azure;
+    margin-bottom: 1px;
+}
+
 .container {
     display: flex;
     flex-direction: column;
-    width: 70%;
-    background-color: aquamarine;
+    gap: 1px;
+    height: 350px;
+    width: 350px;
+    margin-bottom: 7px;
+}
+
+button {
+    margin: 7px;
 }
