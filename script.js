@@ -16,16 +16,24 @@ window.onload = function() {
             element.style = "flex: 1 1 0";
             row.appendChild(element);
             element.addEventListener("mouseenter",()=>{
-                element.style.backgroundColor = "red";
+                element.style.backgroundColor = getRandomColor();
             });
             element.addEventListener("mouseleave",()=>{
-                element.style.backgroundColor = "blue";
+                element.style.backgroundColor = getRandomColor();
             });
         }
         container.appendChild(row);
     }
 };
-
+// Function to generate a random color
+function getRandomColor() {
+    const letters = '0123456789ABCDEF';
+    let color = '#';
+    for (let i = 0; i < 6; i++) {
+        color += letters[Math.floor(Math.random() * 16)];
+    }
+    return color;
+}
 let squareDeployer = ()=>{
     container.textContent = "";
     nSquares = parseInt(prompt("Enter the Number of element per column and row"));
@@ -40,10 +48,10 @@ let squareDeployer = ()=>{
             element.style = "flex: 1 1 0";
             row.appendChild(element);
             element.addEventListener("mouseenter",()=>{
-                element.style.backgroundColor = "red";
+                element.style.backgroundColor = getRandomColor();
             });
             element.addEventListener("mouseleave",()=>{
-                element.style.backgroundColor = "blue";
+                element.style.backgroundColor = getRandomColor();
             });
         }
         container.appendChild(row);
